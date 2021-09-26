@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60EF5159270091CC00CD5A09 /* To_Do_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */; };
-		60EF515B270091CC00CD5A09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF515A270091CC00CD5A09 /* ContentView.swift */; };
+		60EF515B270091CC00CD5A09 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF515A270091CC00CD5A09 /* ToDoView.swift */; };
 		60EF515D270091CD00CD5A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF515C270091CD00CD5A09 /* Assets.xcassets */; };
 		60EF5160270091CD00CD5A09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF515F270091CD00CD5A09 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		60EF5155270091CC00CD5A09 /* To-Do-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_MVVMApp.swift; sourceTree = "<group>"; };
-		60EF515A270091CC00CD5A09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		60EF515A270091CC00CD5A09 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		60EF515C270091CD00CD5A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EF515F270091CD00CD5A09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		60EF5161270091CD00CD5A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */,
-				60EF515A270091CC00CD5A09 /* ContentView.swift */,
+				60EF515A270091CC00CD5A09 /* ToDoView.swift */,
 				60EF515C270091CD00CD5A09 /* Assets.xcassets */,
 				60EF5161270091CD00CD5A09 /* Info.plist */,
 				60EF515E270091CD00CD5A09 /* Preview Content */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EF515B270091CC00CD5A09 /* ContentView.swift in Sources */,
+				60EF515B270091CC00CD5A09 /* ToDoView.swift in Sources */,
 				60EF5159270091CC00CD5A09 /* To_Do_MVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
