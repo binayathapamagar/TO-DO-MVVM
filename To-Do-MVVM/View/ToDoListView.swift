@@ -7,22 +7,14 @@
 
 import SwiftUI
 
-struct Item: Identifiable {
-    var id: UUID
-    var name: String
-}
-
-struct ToDoView: View {
-    @State var items = [
-        Item(id: UUID(), name: "Item 1"),
-        Item(id: UUID(), name: "Item 2"),
-        Item(id: UUID(), name: "Item 3")
-    ]
+struct ToDoListView: View {
+    
+    @ObservedObject var toDoItemsViewModel: ToDoItemsViewModel
     
     var body: some View {
         NavigationView {
             List{
-                ForEach (items) { item in
+                ForEach (toDoItemsViewModel.items) { item in
                     NavigationLink(
                         destination: Text("Destination \(item.name)"),
                         label: {
@@ -30,12 +22,10 @@ struct ToDoView: View {
                         })
                 }
                 .onDelete(perform: { indexSet in
-                    for index in indexSet {
-                        items.remove(at: index)
-                    }
+                    toDoItemsViewModel.deleteItem(in: indexSet)
                 })
                 .onMove(perform: { indices, newOffset in
-                    items.move(fromOffsets: indices, toOffset: newOffset)
+                    toDoItemsViewModel.moveItem(with: indices, to: newOffset)
                 })
             }
             .navigationBarTitle(Text("To-Do"), displayMode: .large)
@@ -43,7 +33,7 @@ struct ToDoView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     EditButton()
                     Button(action: {
-                        items.append(Item(id: UUID(), name: "Newly added Item"))
+                        toDoItemsViewModel.addItem()
                     }, label: {
                         Image(systemName: "plus")
                     })
@@ -55,6 +45,6 @@ struct ToDoView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoView()
+        ToDoListView(toDoItemsViewModel: ToDoItemsViewModel())
     }
 }

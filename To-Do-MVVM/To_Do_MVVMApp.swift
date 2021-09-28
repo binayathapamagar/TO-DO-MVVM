@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct To_Do_MVVMApp: App {
+    
+    @StateObject var toDoItemsViewModel = ToDoItemsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ToDoView()
+            ToDoListView(toDoItemsViewModel: toDoItemsViewModel)
         }
     }
 }

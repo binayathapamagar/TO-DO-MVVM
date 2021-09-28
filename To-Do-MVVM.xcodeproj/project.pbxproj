@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60E5016F270371CC00670AB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E5016E270371CC00670AB4 /* Item.swift */; };
+		60E50171270371EF00670AB4 /* ToDoItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E50170270371EF00670AB4 /* ToDoItemsViewModel.swift */; };
 		60EF5159270091CC00CD5A09 /* To_Do_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */; };
-		60EF515B270091CC00CD5A09 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF515A270091CC00CD5A09 /* ToDoView.swift */; };
+		60EF515B270091CC00CD5A09 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF515A270091CC00CD5A09 /* ToDoListView.swift */; };
 		60EF515D270091CD00CD5A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF515C270091CD00CD5A09 /* Assets.xcassets */; };
 		60EF5160270091CD00CD5A09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF515F270091CD00CD5A09 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60E5016E270371CC00670AB4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		60E50170270371EF00670AB4 /* ToDoItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsViewModel.swift; sourceTree = "<group>"; };
 		60EF5155270091CC00CD5A09 /* To-Do-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_MVVMApp.swift; sourceTree = "<group>"; };
-		60EF515A270091CC00CD5A09 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		60EF515A270091CC00CD5A09 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		60EF515C270091CD00CD5A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EF515F270091CD00CD5A09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		60EF5161270091CD00CD5A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +37,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60E5016A2703719500670AB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60EF515A270091CC00CD5A09 /* ToDoListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60E5016C270371AD00670AB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60E5016E270371CC00670AB4 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60E5016D270371B300670AB4 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				60E50170270371EF00670AB4 /* ToDoItemsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		60EF514C270091CB00CD5A09 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */,
-				60EF515A270091CC00CD5A09 /* ToDoView.swift */,
+				60E5016C270371AD00670AB4 /* Model */,
+				60E5016A2703719500670AB4 /* View */,
+				60E5016D270371B300670AB4 /* View Model */,
 				60EF515C270091CD00CD5A09 /* Assets.xcassets */,
 				60EF5161270091CD00CD5A09 /* Info.plist */,
 				60EF515E270091CD00CD5A09 /* Preview Content */,
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EF515B270091CC00CD5A09 /* ToDoView.swift in Sources */,
+				60EF515B270091CC00CD5A09 /* ToDoListView.swift in Sources */,
+				60E5016F270371CC00670AB4 /* Item.swift in Sources */,
 				60EF5159270091CC00CD5A09 /* To_Do_MVVMApp.swift in Sources */,
+				60E50171270371EF00670AB4 /* ToDoItemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
