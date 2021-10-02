@@ -5,7 +5,7 @@
 //  Created by Binaya on 28/09/2021.
 //
 
-import UIKit
+import SwiftUI
 
 class ToDoItemsViewModel: ObservableObject {
     
@@ -14,7 +14,7 @@ class ToDoItemsViewModel: ObservableObject {
     init(isForTesting: Bool = false) {
         
         if !isForTesting {
-            // Get persisted data from firebase or file manager or local database.
+            // Get persisted data from database.
         }
         
     }

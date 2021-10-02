@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60BF45FF270840350076DD95 /* To_Do_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BF45FE270840350076DD95 /* To_Do_MVVMTests.swift */; };
 		60E5016F270371CC00670AB4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E5016E270371CC00670AB4 /* Item.swift */; };
 		60E50171270371EF00670AB4 /* ToDoItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E50170270371EF00670AB4 /* ToDoItemsViewModel.swift */; };
 		60EF5159270091CC00CD5A09 /* To_Do_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF5158270091CC00CD5A09 /* To_Do_MVVMApp.swift */; };
@@ -15,7 +16,20 @@
 		60EF5160270091CD00CD5A09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF515F270091CD00CD5A09 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		60BF4601270840350076DD95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60EF514D270091CB00CD5A09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60EF5154270091CC00CD5A09;
+			remoteInfo = "To-Do-MVVM";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		60BF45FC270840350076DD95 /* To-Do-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BF45FE270840350076DD95 /* To_Do_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_MVVMTests.swift; sourceTree = "<group>"; };
+		60BF4600270840350076DD95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60E5016E270371CC00670AB4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		60E50170270371EF00670AB4 /* ToDoItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsViewModel.swift; sourceTree = "<group>"; };
 		60EF5155270091CC00CD5A09 /* To-Do-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		60BF45F9270840340076DD95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60EF5152270091CC00CD5A09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60BF45FD270840350076DD95 /* To-Do-MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				60BF45FE270840350076DD95 /* To_Do_MVVMTests.swift */,
+				60BF4600270840350076DD95 /* Info.plist */,
+			);
+			path = "To-Do-MVVMTests";
+			sourceTree = "<group>";
+		};
 		60E5016A2703719500670AB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				60EF5157270091CC00CD5A09 /* To-Do-MVVM */,
+				60BF45FD270840350076DD95 /* To-Do-MVVMTests */,
 				60EF5156270091CC00CD5A09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				60EF5155270091CC00CD5A09 /* To-Do-MVVM.app */,
+				60BF45FC270840350076DD95 /* To-Do-MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +134,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		60BF45FB270840340076DD95 /* To-Do-MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60BF4605270840350076DD95 /* Build configuration list for PBXNativeTarget "To-Do-MVVMTests" */;
+			buildPhases = (
+				60BF45F8270840340076DD95 /* Sources */,
+				60BF45F9270840340076DD95 /* Frameworks */,
+				60BF45FA270840340076DD95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60BF4602270840350076DD95 /* PBXTargetDependency */,
+			);
+			name = "To-Do-MVVMTests";
+			productName = "To-Do-MVVMTests";
+			productReference = 60BF45FC270840350076DD95 /* To-Do-MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		60EF5154270091CC00CD5A09 /* To-Do-MVVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60EF5164270091CD00CD5A09 /* Build configuration list for PBXNativeTarget "To-Do-MVVM" */;
@@ -128,6 +178,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					60BF45FB270840340076DD95 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 60EF5154270091CC00CD5A09;
+					};
 					60EF5154270091CC00CD5A09 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -147,11 +201,19 @@
 			projectRoot = "";
 			targets = (
 				60EF5154270091CC00CD5A09 /* To-Do-MVVM */,
+				60BF45FB270840340076DD95 /* To-Do-MVVMTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		60BF45FA270840340076DD95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60EF5153270091CC00CD5A09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +226,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		60BF45F8270840340076DD95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60BF45FF270840350076DD95 /* To_Do_MVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60EF5151270091CC00CD5A09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,7 +247,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		60BF4602270840350076DD95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60EF5154270091CC00CD5A09 /* To-Do-MVVM */;
+			targetProxy = 60BF4601270840350076DD95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		60BF4603270840350076DD95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H56HFHX43;
+				INFOPLIST_FILE = "To-Do-MVVMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BTM.To-Do-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do-MVVM.app/To-Do-MVVM";
+			};
+			name = Debug;
+		};
+		60BF4604270840350076DD95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H56HFHX43;
+				INFOPLIST_FILE = "To-Do-MVVMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BTM.To-Do-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To-Do-MVVM.app/To-Do-MVVM";
+			};
+			name = Release;
+		};
 		60EF5162270091CD00CD5A09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -341,6 +459,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		60BF4605270840350076DD95 /* Build configuration list for PBXNativeTarget "To-Do-MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60BF4603270840350076DD95 /* Debug */,
+				60BF4604270840350076DD95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		60EF5150270091CB00CD5A09 /* Build configuration list for PBXProject "To-Do-MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

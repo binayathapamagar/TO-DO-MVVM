@@ -53,10 +53,9 @@ struct ToDoListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        
         ToDoListView(toDoItemsViewModel: ToDoItemsViewModel.emptyState())
-        
+            .previewDisplayName("Empty State")
         ToDoListView(toDoItemsViewModel: ToDoItemsViewModel.fullState())
-        
+            .previewDisplayName("Items state")
     }
 }
