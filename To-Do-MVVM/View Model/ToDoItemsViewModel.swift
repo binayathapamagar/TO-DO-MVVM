@@ -9,11 +9,17 @@ import UIKit
 
 class ToDoItemsViewModel: ObservableObject {
     
-    @Published var items = [
-        Item(id: UUID(), name: "Item 1"),
-        Item(id: UUID(), name: "Item 2"),
-        Item(id: UUID(), name: "Item 3")
-    ]
+    @Published var items: [Item] = []
+    
+    init(isForTesting: Bool = false) {
+        
+        if !isForTesting {
+            // Get persisted data from firebase or file manager or local database.
+        }
+        
+    }
+    
+    // User intents methods:
     
     func addItem () {
         items.append(Item(id: UUID(), name: "Newly added Item"))
@@ -27,6 +33,24 @@ class ToDoItemsViewModel: ObservableObject {
         for index in indexSet {
             items.remove(at: index)
         }
+    }
+    
+    // For testing in previews to see different states:
+    
+    static func emptyState() -> ToDoItemsViewModel {
+        let itemsVM = ToDoItemsViewModel(isForTesting: true)
+        itemsVM.items = []
+        return itemsVM
+    }
+    
+    static func fullState() -> ToDoItemsViewModel {
+        let itemsVM = ToDoItemsViewModel(isForTesting: true)
+        itemsVM.items = [
+            Item(id: UUID(), name: "Item 1"),
+            Item(id: UUID(), name: "Item 2"),
+            Item(id: UUID(), name: "Item 3")
+        ]
+        return itemsVM
     }
     
 }

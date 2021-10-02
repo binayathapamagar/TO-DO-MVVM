@@ -13,20 +13,28 @@ struct ToDoListView: View {
     
     var body: some View {
         NavigationView {
-            List{
-                ForEach (toDoItemsViewModel.items) { item in
-                    NavigationLink(
-                        destination: Text("Destination \(item.name)"),
-                        label: {
-                            Text(item.name)
-                        })
+            ZStack {
+                List{
+                    ForEach (toDoItemsViewModel.items) { item in
+                        NavigationLink(
+                            destination: Text("Destination \(item.name)"),
+                            label: {
+                                Text(item.name)
+                            })
+                    }
+                    .onDelete(perform: { indexSet in
+                        toDoItemsViewModel.deleteItem(in: indexSet)
+                    })
+                    .onMove(perform: { indices, newOffset in
+                        toDoItemsViewModel.moveItem(with: indices, to: newOffset)
+                    })
                 }
-                .onDelete(perform: { indexSet in
-                    toDoItemsViewModel.deleteItem(in: indexSet)
-                })
-                .onMove(perform: { indices, newOffset in
-                    toDoItemsViewModel.moveItem(with: indices, to: newOffset)
-                })
+                if toDoItemsViewModel.items.count == 0 {
+                    Text("Add items by clicking on the add '+' button on the top right")
+                        .foregroundColor(.gray)
+                        .padding(50)
+                        .multilineTextAlignment(.center)
+                }
             }
             .navigationBarTitle(Text("To-Do"), displayMode: .large)
             .toolbar(content: {
@@ -45,6 +53,10 @@ struct ToDoListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoListView(toDoItemsViewModel: ToDoItemsViewModel())
+        
+        ToDoListView(toDoItemsViewModel: ToDoItemsViewModel.emptyState())
+        
+        ToDoListView(toDoItemsViewModel: ToDoItemsViewModel.fullState())
+        
     }
 }
